@@ -13,19 +13,12 @@ namespace ModelOfThings.Parser.Services
     {
         private readonly IAmazonS3 _amazonS3;
 
-
-        private const string FilePath = @"C:\Users\userName\Documents\workspace\amazon\test.txt";
-
-        private const string UploadWithKeyName = @"UploadWithKeyName";
-        private const string FileStreamUpload = @"FileStreamUpload";
-        private const string AdvancedUpload = @"func130287/flow.json";
-
         // You need to manually create this directory in your OS, or change the path
         private const string PathAndFileName = @"C:\S3Temp\";
 
         public AmazonS3Service()
         {
-            _amazonS3 = new AmazonS3Client("AKIAICDDFQBHCFAIVNUA", "0sZ76/TZtFfnr1m1zrFiCXTjsjh+dmGWbH8vf5cc", RegionEndpoint.USEast2);
+            _amazonS3 = new AmazonS3Client("", "", RegionEndpoint.USEast2);
         }
 
         public async Task CreateBucketAsync(string bucketName)
