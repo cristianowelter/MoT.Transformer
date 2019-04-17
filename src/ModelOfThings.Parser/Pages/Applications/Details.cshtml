@@ -1,0 +1,15 @@
+﻿@page "{id?}"
+@model ModelOfThings.Parser.Pages.Applications.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+
+    ViewData["AppName"] = Model.MddApplication.Name;
+    ViewData["AppId"] = Model.MddApplication.Id;
+    ViewData["DetailClass"] = "active";
+}
+
+<div class="text-center">
+    <h1 class="display-3 text-muted mb-3">@Html.DisplayFor(model => model.MddApplication.Name)</h1>
+    <h3 class="h3 text-muted">@Html.DisplayFor(model => model.MddApplication.Description)</h3>
+</div>

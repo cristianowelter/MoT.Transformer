@@ -1,0 +1,32 @@
+﻿{
+  "stereotype": "ui_group",
+  "type": "ui_group",
+  "description": "",
+  "Configurable": false,
+  "mddProperties": [
+    {
+      "name": "tab",
+      "value": "de1ab109.a8506",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "disp",
+      "value": true,
+      "required": true,
+      "type": "bool"
+    },
+    {
+      "name": "width",
+      "value": "6",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "collapse",
+      "value": false,
+      "required": true,
+      "type": "bool"
+    }
+  ]
+}

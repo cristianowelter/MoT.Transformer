@@ -1,0 +1,14 @@
+﻿{
+  "stereotype": "ui_tab",
+  "type": "ui_tab",
+  "description": "",
+  "Configurable": false,
+  "mddProperties": [
+    {
+      "name": "icon",
+      "value": "dashboard",
+      "required": true,
+      "type": "string"
+    }
+  ]
+}

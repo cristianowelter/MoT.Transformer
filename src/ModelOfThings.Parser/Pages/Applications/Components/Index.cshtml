@@ -1,0 +1,67 @@
+﻿@page "{appId?}"
+
+@model IndexModel
+
+@{
+    ViewData["Title"] = "Components";
+
+    ViewData["AppName"] = Model.MddApplication.Name;
+    ViewData["AppId"] = Model.MddApplication.Id;
+    ViewData["ComponentClass"] = "active";
+}
+
+@if (Model.MddApplication.UmlUseCases.Any())
+{
+    foreach (var item in Model.MddApplication.UmlUseCases)
+    {
+        <div class="card">
+            <div class="card-header">
+                
+                <h3 class="card-title">
+                    <small class="text-muted m-0">Use Case</small>
+                @item.Name</h3>
+                <div class="card-options">
+                    <a href="#" class="card-options-collapse" data-toggle="card-collapse"><i class="fe fe-chevron-up"></i></a>
+                </div>
+            </div>
+            <div class="card-body p-0">
+                <table class="table card-table">
+                    <tbody>
+                    @foreach (var comp in item.MddComponents)
+                    {
+                        <tr>
+                            <td>
+                                <div class="small text-muted">Component</div>
+                                <div>@comp.Type</div>
+                            </td>
+                            <td>
+                                <div class="small text-muted">Description</div>
+                                <div>@comp.Description</div>
+                            </td>
+                            <td class="text-right">
+                                @if (comp.Configurable)
+                                {
+                                    <a asp-page="Details" asp-route-id="@comp.Id" class="btn btn-sm btn-primary">Configure</a>
+                                }
+                            </td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+
+
+    }
+}
+else
+{
+    <div class="text-center">
+        <i class="fe fe-x-circle display-1 text-muted"></i>
+        <h1 class="display-3 text-muted mb-5">Nothing here!</h1>
+        <h3 class="h3 text-muted">To see the components of application, you must import models!</h3>
+    </div>
+}
+

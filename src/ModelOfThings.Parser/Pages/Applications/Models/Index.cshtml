@@ -1,0 +1,42 @@
+﻿@page "{appId?}"
+
+
+@model ModelOfThings.Parser.Pages.Applications.Models.IndexModel
+@{
+    ViewData["Title"] = "Models";
+
+    ViewData["AppName"] = Model.MddApplication.Name;
+    ViewData["AppId"] = Model.MddApplication.Id;
+    ViewData["ModelClass"] = "active";
+}
+
+
+@if (Model.MddApplication.UmlModels.Any())
+{
+    <div class="card">
+        <div class="card-header">
+            <a asp-page="Import" asp-route-appId="@Model.MddApplication.Id" class="btn btn-purple">Import Models</a>
+        </div>
+        <table class="table card-table">
+            <tbody>
+                @foreach (var item in Model.MddApplication.UmlModels)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td class="text-right"><span class="text-muted">@item.Date</span></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <div class="text-center">
+        <i class="fe fe-x-circle display-1 text-muted"></i>
+        <h1 class="display-3 text-muted mb-5">Nothing here!</h1>
+        <h3 class="h3 text-muted">To see the components of application, you must import models!</h3>
+        <a asp-page="Import" asp-route-appId="@Model.MddApplication.Id" class="btn btn-purple">Import Models</a>
+    </div>
+}
+

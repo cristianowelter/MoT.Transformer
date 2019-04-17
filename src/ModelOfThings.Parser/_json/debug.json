@@ -1,0 +1,28 @@
+﻿{
+  "stereotype": "debug",
+  "type": "debug",
+  "Configurable": false,
+  "positionX": 110,
+  "positionY": 200,
+  "ConnectionIn": true,
+  "mddProperties": [
+    {
+      "name": "active",
+      "value": true,
+      "required": true,
+      "type": "bool"
+    },
+    {
+      "name": "console",
+      "value": "false",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "complete",
+      "value": "true",
+      "required": true,
+      "type": "string"
+    }
+  ]
+}

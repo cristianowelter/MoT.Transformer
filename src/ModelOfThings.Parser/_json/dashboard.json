@@ -1,0 +1,37 @@
+﻿{
+  "stereotype": "dashboard",
+  "type": "tab",
+  "Configurable": false,
+  "mddComponents": [
+    {
+      "id": "a",
+      "stereotype": "change",
+      "positionX": 432,
+      "positionY": 164,
+      "connections": "b",
+      "ConnectionIn": true
+    },
+    {
+      "id": "b",
+      "stereotype": "ui_gauge",
+      "positionX": 700,
+      "positionY": 156,
+      "connections": "c"
+    },
+    {
+      "id": "25d1257d.2b231a",
+      "stereotype": "ui_group",
+      "type": "ui_group",
+      "z": "",
+      "name": "Default"
+    },
+    {
+      "id": "de1ab109.a8506",
+      "stereotype": "ui_tab",
+      "type": "ui_tab",
+      "z": "",
+      "name": "Home",
+      "icon": "dashboard"
+    }
+  ]
+}

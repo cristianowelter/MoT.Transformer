@@ -1,0 +1,53 @@
+﻿@page
+@model ModelOfThings.Parser.Pages.Applications.IndexModel
+
+@{
+    Layout = "/Pages/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Applications";
+}
+
+<div class="container">
+
+    <div class="page-header">
+        <div>
+            <h1 class="page-title">@ViewData["Title"]</h1>
+            <div class="page-description">
+                description
+            </div>
+        </div>
+        <div class="page-options d-flex">
+            @*<div class="input-icon mr-4">
+                <span class="input-icon-addon">
+                    <i class="fe fe-search"></i>
+                </span>
+                <input type="text" class="form-control w-10" placeholder="Search photo">
+            </div>
+            <select class="form-control custom-select mr-4 w-auto">
+                <option value="asc">Newest</option>
+                <option value="desc">Oldest</option>
+            </select>*@
+            <a asp-page="Create" class="btn btn-primary">New Application</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <table class="table card-table table-vcenter">
+            <tbody>
+                @foreach (var item in Model.MddApplications)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+                        <td class="text-right">
+                            <a asp-page="Details" asp-route-id="@item.Id" class="btn btn-info">Details</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

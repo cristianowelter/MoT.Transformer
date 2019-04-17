@@ -1,0 +1,49 @@
+﻿@{ 
+    Layout = "/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    
+    <div class="page-header">
+        <div>
+            <h1 class="page-title">@ViewData["AppName"]</h1>
+            <div class="page-description">
+
+            </div>
+        </div>
+        <div class="page-options d-flex">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3 my-3 my-md-5">
+            <div class="list-group list-group-transparent mb-0">
+                <a asp-page="/Applications/Details" asp-route-id="@ViewData["AppId"]" class="list-group-item list-group-item-action d-flex align-items-center @ViewData["DetailClass"]">
+                    <span class="icon mr-3"><i class="fe fe-inbox"></i></span>Details
+                </a>
+                <a asp-page="/Applications/Models/Index" asp-route-appId="@ViewData["AppId"]" class="list-group-item list-group-item-action d-flex align-items-center @ViewData["ModelClass"]">
+                    <span class="icon mr-3"><i class="fe fe-send"></i></span>Models
+                </a>
+                <a asp-page="/Applications/Components/Index" asp-route-appId="@ViewData["AppId"]" class="list-group-item list-group-item-action d-flex align-items-center @ViewData["ComponentClass"]">
+                    <span class="icon mr-3"><i class="fe fe-alert-circle"></i></span>Components
+                </a>
+                <a asp-page="/Applications/CloudProviders/Index" asp-route-appId="@ViewData["AppId"]" class="list-group-item list-group-item-action d-flex align-items-center @ViewData["ProviderClass"]">
+                    <span class="icon mr-3"><i class="fe fe-cloud"></i></span>Cloud Providers
+                </a>
+                <a asp-page="/Applications/Delete" asp-route-appId="@ViewData["AppId"]" class="list-group-item list-group-item-action d-flex align-items-center @ViewData["DeleteClass"]">
+                    <span class="icon mr-3"><i class="fe fe-trash-2"></i></span>Delete
+                </a>
+            </div>
+            <div class="mt-6">
+                <a asp-page="/Applications/Deploy" asp-route-appId="@ViewData["AppId"]" class="btn btn-primary btn-block">Build and Export</a>
+            </div>
+        </div>
+        <div class="col-md-9">
+            @RenderBody()
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @RenderSection("Scripts", required: false)
+}

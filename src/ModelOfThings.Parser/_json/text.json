@@ -1,0 +1,49 @@
+﻿{
+  "stereotype": "text",
+  "type": "tab",
+  "Configurable": false,
+  "mddComponents": [
+    {
+      "id": "a",
+      "type": "ui_text",
+      "positionX": 432,
+      "positionY": 164,
+      "ConnectionIn": true,
+      "mddproperties": [
+        {
+          "name": "group",
+          "value": "25d1257d.2b231a",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "format",
+          "value": "{{msg.text}}",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "layout",
+          "value": "row-spread",
+          "required": true,
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "id": "25d1257d.2b231a",
+      "stereotype": "ui_group",
+      "type": "ui_group",
+      "z": "",
+      "name": "Default"
+    },
+    {
+      "id": "de1ab109.a8506",
+      "stereotype": "ui_tab",
+      "type": "ui_tab",
+      "z": "",
+      "name": "Home",
+      "icon": "dashboard"
+    }
+  ]
+}

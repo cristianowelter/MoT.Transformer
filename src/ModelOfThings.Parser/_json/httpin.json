@@ -1,0 +1,20 @@
+{
+  "stereotype": "httpin",
+  "type": "http in",
+  "description": "",
+  "configurable": true,
+  "mddProperties": [
+    {
+      "name": "url",
+      "value": "",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "method",
+      "value": "",
+      "required": true,
+      "type": "string"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+﻿{
+  "stereotype": "database",
+  "type": "mongodb out",
+  "description": "Database with cloud service.",
+  "Configurable": true,
+  "name": ""
+}

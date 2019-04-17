@@ -1,0 +1,41 @@
+﻿@page "{appId?}"
+
+@model IndexModel
+
+@{
+    ViewData["Title"] = "Cloud Providers";
+
+    ViewData["AppName"] = Model.MddApplication.Name;
+    ViewData["AppId"] = Model.MddApplication.Id;
+    ViewData["ProviderClass"] = "active";
+}
+
+@if (Model.MddApplication.CloudProviders.Any())
+{
+    <div class="card">
+        <div class="card-header">
+            <a asp-page="Create" asp-route-id="@Model.MddApplication.Id" class="btn btn-purple">Configure provider</a>
+        </div>
+        <table class="table card-table">
+            <tbody>
+                @foreach (var item in Model.MddApplication.CloudProviders)
+                {
+                    <tr>
+                        <td><i class="fa fa-edge text-muted"></i></td>
+                        <td>@item.Id</td>
+                        <td>@item.Provider.ToString()</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <div class="text-center">
+        <i class="fe fe-x-circle display-1 text-muted"></i>
+        <h1 class="display-3 text-muted mb-5">Nothing here!</h1>
+        <h3 class="h3 text-muted">Configure a Cloud Services provider account</h3>
+        <a asp-page="Create" asp-route-appId="@Model.MddApplication.Id" class="btn btn-purple">Configure provider</a>
+    </div>
+}

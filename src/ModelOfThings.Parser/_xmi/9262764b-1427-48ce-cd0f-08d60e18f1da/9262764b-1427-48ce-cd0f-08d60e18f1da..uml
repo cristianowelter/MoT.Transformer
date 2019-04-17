@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:MoT="https://cristianowelter.visualstudio.com/ModelOfThings" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="https://cristianowelter.visualstudio.com/ModelOfThings /ModelOfThings.Profile/ModelOfThings.profile.uml#_FySg8KpnEeiXZM-78R0D4w">
+  <uml:Model xmi:id="_es6A4KpmEeiXZM-78R0D4w" name="Monitoring">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_e0G1EKpmEeiXZM-78R0D4w">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_4RiRsKpmEeiXZM-78R0D4w" name="UseCase3"/>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_Nw1r4KpnEeiXZM-78R0D4w" name="Actor4"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_PTmfIKpnEeiXZM-78R0D4w" memberEnd="_PTua8KpnEeiXZM-78R0D4w _PTvCAKpnEeiXZM-78R0D4w">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_PTtM0KpnEeiXZM-78R0D4w" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PTtM0apnEeiXZM-78R0D4w" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_PTua8KpnEeiXZM-78R0D4w" name="usecase3" type="_4RiRsKpmEeiXZM-78R0D4w" association="_PTmfIKpnEeiXZM-78R0D4w"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_PTvCAKpnEeiXZM-78R0D4w" name="actor4" type="_Nw1r4KpnEeiXZM-78R0D4w" association="_PTmfIKpnEeiXZM-78R0D4w"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_e0B8kKpmEeiXZM-78R0D4w">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_L8EioKpnEeiXZM-78R0D4w" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_L8EioapnEeiXZM-78R0D4w" key="Version" value="0.0.2"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_L8EioqpnEeiXZM-78R0D4w" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_L8Eio6pnEeiXZM-78R0D4w" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_L8EipKpnEeiXZM-78R0D4w" key="Date" value="2018-08-27"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_L8EipapnEeiXZM-78R0D4w" key="Author" value="Cristiano Welter"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_e0DKsKpmEeiXZM-78R0D4w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="/ModelOfThings.Profile/ModelOfThings.profile.uml#_FySg8KpnEeiXZM-78R0D4w"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="/ModelOfThings.Profile/ModelOfThings.profile.uml#_BfuKcKplEeiXZM-78R0D4w"/>
+    </profileApplication>
+  </uml:Model>
+  <MoT:Monitoring xmi:id="_NUu-sKpnEeiXZM-78R0D4w" base_UseCase="_4RiRsKpmEeiXZM-78R0D4w"/>
+</xmi:XMI>

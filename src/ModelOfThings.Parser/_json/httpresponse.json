@@ -1,0 +1,7 @@
+{
+  "stereotype": "httpresponse",
+  "type": "http response",
+  "description": "Sends responses back to requests received from an HTTP Input node.",
+  "configurable": true,
+  "properties": []
+}

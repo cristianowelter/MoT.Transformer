@@ -1,0 +1,14 @@
+{
+  "stereotype": "DatabaseSave",
+  "type": "tab",
+  "Configurable": true,
+  "mddComponents": [
+    {
+      "ConnectionIn": true,
+      "id": "c",
+      "stereotype": "mongodbout",
+      "positionX": 640,
+      "positionY": 200
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+﻿{
+  "stereotype": "word",
+  "type": "tab",
+  "Configurable": false,
+  "mddComponents": [
+    {
+      "id": "a",
+      "type": "function",
+      "name": "Command",
+      "positionX": 444,
+      "positionY": 143,
+      "ConnectionOut": true,
+      "ConnectionIn": true,
+      "configurable": true,
+      "mddProperties": [
+        {
+          "name": "func",
+          "value": "var spoken = context.get('spoken') || false;\nvar threshold = 60;\nvar outString = \"yes\";\nvar outMsg = {payload: \"\", text : outString};\n\nif (!spoken) {\n    if (msg.payload >= threshold) {\n        outMsg.payload = outString;\n        spoken = true;\n    }\n}\n\nif (msg.payload < threshold) {\n    spoken = false;\n    outMsg.text = \"\";\n}\n\nconsole.log(outMsg);\n\ncontext.set('spoken', spoken);\nreturn outMsg;",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "outputs",
+          "value": 1,
+          "required": true,
+          "type": "int"
+        },
+        {
+          "name": "noerr",
+          "value": 0,
+          "required": true,
+          "type": "int"
+        }
+      ]
+    }
+  ]
+}

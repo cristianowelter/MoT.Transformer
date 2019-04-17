@@ -1,0 +1,105 @@
+{
+  "stereotype": "mqttin",
+  "type": "mqtt in",
+  "description": "Connects to a MQTT broker and subscribes to messages from the specified topic.",
+  "configurable": true,
+  "mddproperties": [
+    {
+      "name": "topic",
+      "value": "",
+      "required": false,
+      "type": "string"
+    },
+    {
+      "name": "qos",
+      "value": "2",
+      "required": true,
+      "type": "string"
+    },
+    //{
+    //  "name": "broker",
+    //  "value": "",
+    //  "required": true,
+    //  "type": "broker"
+    //},
+    {
+      "name": "broker",
+      "value": "test.mosquitto.org",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "port",
+      "value": "1883",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "clientid",
+      "value": "",
+      "required": false,
+      "type": "string"
+    },
+    {
+      "name": "usetls",
+      "value": false,
+      "required": true,
+      "type": "bool"
+    },
+    {
+      "name": "compatmode",
+      "value": true,
+      "required": true,
+      "type": "bool"
+    },
+    {
+      "name": "keepalive",
+      "value": "60",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "cleansession",
+      "value": true,
+      "required": true,
+      "type": "bool"
+    },
+    {
+      "name": "willTopic",
+      "value": "",
+      "required": false,
+      "type": "string"
+    },
+
+    {
+      "name": "willQos",
+      "value": "",
+      "required": false,
+      "type": "string"
+    },
+    {
+      "name": "willPayload",
+      "value": "",
+      "required": false,
+      "type": "string"
+    },
+    {
+      "name": "birthTopic",
+      "value": "",
+      "required": false,
+      "type": "string"
+    },
+    {
+      "name": "birthQos",
+      "value": "0",
+      "required": false,
+      "type": "string"
+    },
+    {
+      "name": "birthPayload",
+      "value": "",
+      "required": false,
+      "type": "string"
+    }
+  ]
+}

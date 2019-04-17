@@ -1,0 +1,70 @@
+﻿{
+  "stereotype": "SendEmail",
+  "type": "tab",
+  "Configurable": true,
+  "mddComponents": [
+    {
+      "ConnectionIn": true,
+      "connections": "b",
+      "description": "A JavaScript function block to run against the messages being received by the node",
+      "id": "a",
+      "mddproperties": [
+        {
+          "name": "func",
+          "value": "msg.topic = \"Alerta\"\nmsg.payload = \"mensagem\";\n\nreturn msg;",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "noerr",
+          "value": 0,
+          "required": true,
+          "type": "int"
+        },
+        {
+          "name": "outputs",
+          "value": 1,
+          "required": true,
+          "type": "int"
+        }
+      ],
+      "positionX": 366,
+      "positionY": 228,
+      "type": "function"
+    },
+    {
+      "id": "b",
+      "type": "e-mail",
+      "positionX": 622,
+      "positionY": 242,
+      "Configurable": true,
+      "description": "Send email messages",
+      "mddproperties": [
+        {
+          "name": "server",
+          "value": "smtp.gmail.com",
+          "required": true,
+          "type": "string"
+        },
+        //{
+        //  "name": "name",
+        //  "value": "destino@email.com",
+        //  "required": true,
+        //  "type": "string"
+        //},
+        {
+          "name": "port",
+          "value": "465",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "secure",
+          "value": true,
+          "required": true,
+          "type": "boolean"
+        }
+      ]
+    }
+  ]
+}

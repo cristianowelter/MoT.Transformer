@@ -1,0 +1,78 @@
+﻿@page "{appId?}"
+
+@model ModelOfThings.Parser.Pages.Applications.CloudProviders.CreateModel
+
+@{
+    ViewData["Title"] = "Cloud Providers";
+
+    ViewData["AppName"] = Model.MddApplication.Name;
+    ViewData["AppId"] = Model.MddApplication.Id;
+    ViewData["ProviderClass"] = "active";
+}
+
+<div class="page-header">
+    <h1 class="page-title"></h1>
+    <div class="page-description">
+        <ul class="list-inline list-inline-dots m-0">
+            <li class="list-inline-item">@ViewData["AppName"]</li>
+            <li class="list-inline-item">@ViewData["Title"]</li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="card">
+    <div class="card-body">
+        <div class="text-wrap p-lg-6">
+            <h2 class="mt-0 mb-4">Configura a Cloud Services Provider</h2>
+            <p></p>
+
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="CloudProvider.MddApplicationId" />
+
+                <div class="form-group form-group-lg">
+                    <label asp-for="CloudProvider.Provider" class="form-label"></label>
+                    <div class="selectgroup w-100">
+                        <label class="selectgroup-item">
+                            <input type="radio" asp-for="CloudProvider.Provider" value="Amazon" class="selectgroup-input">
+                            <span class="selectgroup-button">AWS</span>
+                        </label>
+                        <label class="selectgroup-item">
+                            <input type="radio" asp-for="CloudProvider.Provider" disabled="disabled" value="Google" class="selectgroup-input">
+                            <span class="selectgroup-button">Google Cloud</span>
+                        </label>
+                        <label class="selectgroup-item">
+                            <input type="radio" asp-for="CloudProvider.Provider" disabled="disabled" value="Microsoft" class="selectgroup-input">
+                            <span class="selectgroup-button">Microsoft Azure</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group form-group-lg">
+                    <label asp-for="CloudProvider.AccountId" class="form-label"></label>
+                    <input asp-for="CloudProvider.AccountId" type="text" class="form-control" />
+                    <span asp-validation-for="CloudProvider.AccountId" class="text-danger"></span>
+                </div>
+
+                <div class="form-group form-group-lg">
+                    <label asp-for="CloudProvider.AccessKey" class="form-label"></label>
+                    <input asp-for="CloudProvider.AccessKey" type="text" class="form-control form-control-lg" />
+                    <span asp-validation-for="CloudProvider.AccessKey" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="CloudProvider.SecretAccessKey" class="form-label"></label>
+                    <input asp-for="CloudProvider.SecretAccessKey" type="text" class="form-control" />
+                    <span asp-validation-for="CloudProvider.SecretAccessKey" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn btn-lg btn-primary">Save</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

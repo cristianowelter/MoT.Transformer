@@ -1,0 +1,50 @@
+﻿@page "{id?}"
+
+@model DetailsModel
+@{
+
+    ViewData["Title"] = "Component Detail";
+
+    ViewData["AppName"] = Model.MddComponent.MddApplication.Name;
+    ViewData["AppId"] = Model.MddComponent.MddApplication.Id;
+    ViewData["ComponentClass"] = "active";
+}
+
+<div class="page-header">
+    <h1 class="page-title"></h1>
+    <div class="page-description">
+        <ul class="list-inline list-inline-dots m-0">
+            <li class="list-inline-item">@ViewData["AppName"]</li>
+            <li class="list-inline-item">@ViewData["Title"]</li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="card">
+    <div class="card-body">
+        <div class="text-wrap p-lg-6">
+            <h2 class="mt-0 mb-4">Configure a Component</h2>
+            <p></p>
+
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                
+                
+
+                @if (Model.MddComponent.MddProperties.Any())
+                {
+                    @await Html.PartialAsync("_Properties", Model.MddComponent.MddProperties.ToList())
+                }
+
+                <button type="submit" class="btn btn-lg btn-primary">Save</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+

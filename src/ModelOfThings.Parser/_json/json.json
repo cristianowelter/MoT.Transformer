@@ -1,0 +1,15 @@
+﻿{
+  "stereotype": "json",
+  "type": "json",
+  "description": "Converts between a JSON string and its JavaScript object representation, in either direction.",
+  "Configurable": false,
+  "name": "",
+  "mddproperties": [
+    {
+      "name": "pretty",
+      "value": "true",
+      "required": false,
+      "type": "bool"
+    }
+  ]
+}

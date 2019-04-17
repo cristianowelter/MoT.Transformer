@@ -1,0 +1,69 @@
+﻿{
+  "stereotype": "DashboardGauge",
+  "type": "ui_gauge",
+  "description": "Adds a gauge type widget to the user interface.",
+  "Configurable": true,
+  "name": "",
+  "mddProperties": [
+    {
+      "name": "group",
+      "value": "8fa9f1dc.d5012",
+      "required": false,
+      "type": "ui_group"
+    },
+    {
+      "name": "order",
+      "value": 0,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "name": "width",
+      "value": 0,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "name": "height",
+      "value": 0,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "name": "gtype",
+      "value": "gage",
+      "required": false,
+      "type": "string"
+    },
+    {
+      "name": "title",
+      "value": "gauge-temperature",
+      "required": false,
+      "type": "string"
+    },
+    {
+      "name": "label",
+      "value": "units",
+      "required": false,
+      "type": "string"
+    },
+    {
+      "name": "format",
+      "value": "{{value}}",
+      "required": false,
+      "type": "string"
+    },
+    {
+      "name": "min",
+      "value": "-5",
+      "required": false,
+      "type": "string"
+    },
+    {
+      "name": "max",
+      "value": "45",
+      "required": false,
+      "type": "string"
+    }
+  ]
+}

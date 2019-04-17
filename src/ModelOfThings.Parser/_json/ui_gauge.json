@@ -1,0 +1,44 @@
+﻿{
+  "stereotype": "ui_gauge",
+  "type": "ui_gauge",
+  "description": "",
+  "Configurable": false,
+  "mddProperties": [
+    {
+      "name": "group",
+      "value": "25d1257d.2b231a",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "gtype",
+      "value": "gage",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "label",
+      "value": "units",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "format",
+      "value": "{{value}}",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "min",
+      "value": "0",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "max",
+      "value": "100",
+      "required": true,
+      "type": "string"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+﻿{
+  "stereotype": "emotivbci",
+  "type": "tab",
+  "Configurable": false,
+  "mddComponents": [
+    {
+      "id": "a",
+      "type": "EMOTIV",
+      "name": "EMOTIV",
+      "configurable": false,
+      "positionX": 103,
+      "positionY": 328,
+      "connections": "b"
+    },
+    {
+      "id": "b",
+      "type": "Profile-Name",
+      "name": "Profile Name",
+      "positionX": 247,
+      "positionY": 257,
+      "connections": "c"
+    },
+    {
+      "id": "c",
+      "type": "Mental-Command",
+      "name": "Mental Commands",
+      "positionX": 444,
+      "positionY": 143,
+      "ConnectionOut": true,
+      "configurable": true,
+      "mddProperties": [
+        {
+          "name": "actionName",
+          "value": "push",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "mcSen",
+          "value": "10",
+          "required": true,
+          "type": "string"
+        }
+      ]
+    }
+  ]
+}

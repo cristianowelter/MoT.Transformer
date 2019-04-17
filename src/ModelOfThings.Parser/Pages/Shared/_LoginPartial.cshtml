@@ -1,0 +1,41 @@
+@using Microsoft.AspNetCore.Identity
+@using Models
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{
+    var user = await UserManager.GetUserAsync(User);
+
+    <div class="dropdown">
+        <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
+            <span class="ml-2 d-none d-lg-block">
+                <span class="text-default">@user.Name</span>
+                <small class="text-muted d-block mt-1">@user.Email</small>
+            </span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+            <a class="dropdown-item" href="#">
+                <i class="dropdown-icon fe fe-user"></i> Profile
+            </a>
+            <a class="dropdown-item" href="#">
+                <i class="dropdown-icon fe fe-settings"></i> Settings
+            </a>
+            <a class="dropdown-item" href="#">
+                <i class="dropdown-icon fe fe-log-out"></i> Sign out
+            </a>
+        </div>
+    </div>
+}
+else
+{
+    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+        <li class="nav-item">
+            <a asp-area="Identity" asp-page="/Account/Register" class="btn btn-outline-primary">Register</a>
+        </li>
+        <li class="nav-item">
+            <a asp-area="Identity" asp-page="/Account/Login" class="btn btn-primary">Log in</a>
+        </li>
+    </ul>
+}

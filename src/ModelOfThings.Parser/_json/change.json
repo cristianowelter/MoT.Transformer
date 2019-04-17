@@ -1,0 +1,15 @@
+﻿{
+  "stereotype": "change",
+  "type": "change",
+  "description": "Converts between a JSON string and its JavaScript object representation, in either direction.",
+  "Configurable": true,
+  "name": "",
+  "mddProperties": [
+    {
+      "name": "rules",
+      "value": "[{\"t\": \"set\",\"p\": \"payload\",\"pt\": \"msg\",\"to\": \"payload.ambientTemp\",\"tot\": \"msg\"}]",
+      "required": false,
+      "type": "array"
+    }
+  ]
+}

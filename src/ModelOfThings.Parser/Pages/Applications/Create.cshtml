@@ -1,0 +1,65 @@
+﻿@page
+@using System.Security.Claims
+@model ModelOfThings.Parser.Pages.Applications.CreateModel
+
+@{
+    Layout = "/Pages/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Create";
+}
+
+
+<div class="container">
+
+    <div class="page-header">
+        <div>
+            <h1 class="page-title">@ViewData["Title"]</h1>
+            <div class="page-description">
+                description
+            </div>
+        </div>
+        <div class="page-options d-flex">
+            @*<div class="input-icon mr-4">
+                    <span class="input-icon-addon">
+                        <i class="fe fe-search"></i>
+                    </span>
+                    <input type="text" class="form-control w-10" placeholder="Search photo">
+                </div>
+                <select class="form-control custom-select mr-4 w-auto">
+                    <option value="asc">Newest</option>
+                    <option value="desc">Oldest</option>
+                </select>*@
+        </div>
+    </div>
+
+    <div class="card">
+
+        <div class="card-body">
+            <div class="row justify-content-md-center">
+                <div class="col col-md-6">
+                    <form method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                    
+                        <input type="hidden" asp-for="MddApplication.UserId" value="@User.FindFirstValue(ClaimTypes.NameIdentifier)"/>
+                        <div class="form-group">
+                            <label asp-for="MddApplication.Name" class="control-label"></label>
+                            <input asp-for="MddApplication.Name" class="form-control" />
+                            <span asp-validation-for="MddApplication.Name" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="MddApplication.Description" class="control-label"></label>
+                            <input asp-for="MddApplication.Description" class="form-control" />
+                            <span asp-validation-for="MddApplication.Description" class="text-danger"></span>
+                        </div>
+                        <div class="form-group text-center">
+                            <button type="submit" class="btn btn-lg btn-primary" >Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

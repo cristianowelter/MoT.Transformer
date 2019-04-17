@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cloudmdd="https://github.com/cristianowelter/CloudMDD-UMLProfile" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="https://github.com/cristianowelter/CloudMDD-UMLProfile /cloudmdd/cloudmdd.profile.uml#_s2P0EEdTEeiDuq9RdldMJw">
+  <uml:Model xmi:id="_FGeTUEDpEeiQf4Ke7yD5gw" name="example">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_FQw3wEDpEeiQf4Ke7yD5gw">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_LxtcIEdTEeiDuq9RdldMJw" name="Actor8"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_MISJEEdTEeiDuq9RdldMJw" name="UseCase9"/>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_Ma90gEdTEeiDuq9RdldMJw" name="Actor10"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_zPjfgEdTEeiDuq9RdldMJw" memberEnd="_zPpmIEdTEeiDuq9RdldMJw _zPpmIUdTEeiDuq9RdldMJw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zPktoEdTEeiDuq9RdldMJw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zPlUsEdTEeiDuq9RdldMJw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_zPpmIEdTEeiDuq9RdldMJw" name="usecase9" type="_MISJEEdTEeiDuq9RdldMJw" association="_zPjfgEdTEeiDuq9RdldMJw"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_zPpmIUdTEeiDuq9RdldMJw" name="actor8" type="_LxtcIEdTEeiDuq9RdldMJw" association="_zPjfgEdTEeiDuq9RdldMJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_zvlDYEdTEeiDuq9RdldMJw" memberEnd="_zvmRgkdTEeiDuq9RdldMJw _zvmRg0dTEeiDuq9RdldMJw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zvmRgEdTEeiDuq9RdldMJw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zvmRgUdTEeiDuq9RdldMJw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_zvmRgkdTEeiDuq9RdldMJw" name="actor10" type="_Ma90gEdTEeiDuq9RdldMJw" association="_zvlDYEdTEeiDuq9RdldMJw"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_zvmRg0dTEeiDuq9RdldMJw" name="usecase9" type="_MISJEEdTEeiDuq9RdldMJw" association="_zvlDYEdTEeiDuq9RdldMJw"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_WNrrwEdTEeiDuq9RdldMJw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_WNwkQEdTEeiDuq9RdldMJw" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_WNwkQUdTEeiDuq9RdldMJw" key="Version" value="0.0.11"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_WNwkQkdTEeiDuq9RdldMJw" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_WNwkQ0dTEeiDuq9RdldMJw" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_WNwkREdTEeiDuq9RdldMJw" key="Date" value="2018-04-18"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_WNwkRUdTEeiDuq9RdldMJw" key="Author" value="Cristiano Welter"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_WNuIAEdTEeiDuq9RdldMJw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="/cloudmdd/cloudmdd.profile.uml#_s2P0EEdTEeiDuq9RdldMJw"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="/cloudmdd/cloudmdd.profile.uml#_VPvSYEDoEeiQf4Ke7yD5gw"/>
+    </profileApplication>
+  </uml:Model>
+  <cloudmdd:httpin xmi:id="_YXX8IEdTEeiDuq9RdldMJw" base_Actor="_LxtcIEdTEeiDuq9RdldMJw"/>
+  <cloudmdd:httpresponse xmi:id="_w6CZoEdTEeiDuq9RdldMJw" base_Actor="_Ma90gEdTEeiDuq9RdldMJw"/>
+</xmi:XMI>

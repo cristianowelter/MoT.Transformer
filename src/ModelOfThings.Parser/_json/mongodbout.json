@@ -1,0 +1,39 @@
+﻿{
+  "stereotype": "mongodbout",
+  "type": "mongodb out",
+  "description": "A simple MongoDB output node. Can save, insert, update and remove objects from a chosen collection.",
+  "Configurable": true,
+  "name": "",
+  "mddproperties": [
+    {
+      "name": "service",
+      "value": "",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "collection",
+      "value": "",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "hostname",
+      "value": "ds125618.mlab.com",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "port",
+      "value": "25618",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "database",
+      "value": "modelofthings",
+      "required": true,
+      "type": "string"
+    }
+  ]
+}

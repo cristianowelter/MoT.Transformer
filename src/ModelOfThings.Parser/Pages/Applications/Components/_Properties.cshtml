@@ -1,0 +1,40 @@
+﻿@model IList<Parser.Models.MddPropertie>
+
+@if (Model.Any())
+{
+    for (var i = 0; i < Model.Count; i++)
+
+    {
+        <div class="form-group form-group-lg">
+
+            <input type="hidden" name="MddProperties[@i].Id" value="@Model[i].Id"/>
+            <input type="hidden" name="MddProperties[@i].Name" value="@Model[i].Name"/>
+            <input type="hidden" name="MddProperties[@i].Required" value="@Model[i].Required.ToString()"/>
+            <input type="hidden" name="MddProperties[@i].Type" value="@Model[i].Type"/>
+
+            <label class="form-label">@Model[i].Name</label>
+
+            @if (Model[i].Type.Equals("string"))
+            {
+                <input type="text" name="MddProperties[@i].Value" value="@Model[i].Value" class="form-control"/>
+            }
+            else if (Model[i].Type.Equals("int"))
+            {
+                <input type="number" name="MddProperties[@i].Value" value="@Model[i].Value" class="form-control"/>
+            }
+            else if (Model[i].Type.Equals("bool"))
+            {
+                <input type="number" name="MddProperties[@i].Value" value="@Model[i].Value" class="form-control"/>
+            }
+            else if (Model[i].Type.Equals("mqtt-broker"))
+            {
+               
+            }
+
+            @if (Model[i].Required)
+            {
+                <small class="text-danger">field required</small>
+            }
+        </div>
+    }
+}

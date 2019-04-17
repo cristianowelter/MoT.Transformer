@@ -1,0 +1,208 @@
+﻿[
+  {
+    "id": "dba966fb.481c28",
+    "type": "tab",
+    "label": "Mostrar Dashboard"
+  },
+  {
+    "id": "c57d9058.edd0b",
+    "type": "tab",
+    "label": "Enviar Alerta"
+  },
+  {
+    "id": "24b73be9.bd5604",
+    "type": "tab",
+    "label": "Monitorar Temperatura",
+    "disabled": false,
+    "info": ""
+  },
+  {
+    "id": "a14dff02.c479e",
+    "type": "mqtt-broker",
+    "z": "",
+    "broker": "test.mosquitto.org",
+    "port": "1883",
+    "clientid": "clientId-FdFyDq0m5U",
+    "usetls": false,
+    "compatmode": true,
+    "keepalive": "60",
+    "cleansession": true,
+    "willTopic": "",
+    "willQos": "0",
+    "willPayload": "",
+    "birthTopic": "",
+    "birthQos": "0",
+    "birthPayload": ""
+  },
+  {
+    "id": "25d1257d.2b231a",
+    "type": "ui_group",
+    "z": "",
+    "name": "Default",
+    "tab": "de1ab109.a8506",
+    "disp": true,
+    "width": "6",
+    "collapse": false
+  },
+  {
+    "id": "de1ab109.a8506",
+    "type": "ui_tab",
+    "z": "",
+    "name": "Home",
+    "icon": "dashboard"
+  },
+  {
+    "id": "767dc75f.657778",
+    "type": "link in",
+    "z": "c57d9058.edd0b",
+    "name": "Extend",
+    "links": [
+      "5b3f7265.b5d80c"
+    ],
+    "x": 271,
+    "y": 109,
+    "wires": [
+      [
+        "1b2cac10.3e67b4"
+      ]
+    ]
+  },
+  {
+    "id": "1b2cac10.3e67b4",
+    "type": "debug",
+    "z": "c57d9058.edd0b",
+    "name": "",
+    "active": true,
+    "console": "false",
+    "complete": "true",
+    "x": 523,
+    "y": 215,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "abafbd4b.556f",
+    "type": "link out",
+    "z": "24b73be9.bd5604",
+    "name": "Include",
+    "links": [
+      "4d7d8a06.39a284"
+    ],
+    "x": 597,
+    "y": 385,
+    "wires": []
+  },
+  {
+    "id": "4d7d8a06.39a284",
+    "type": "link in",
+    "z": "dba966fb.481c28",
+    "name": "Include",
+    "links": [
+      "abafbd4b.556f"
+    ],
+    "x": 207,
+    "y": 112,
+    "wires": [
+      [
+        "d1a0b057.cb4ba",
+        "d63e100d.546b2"
+      ]
+    ]
+  },
+  {
+    "id": "2957af33.d879c",
+    "type": "mqtt in",
+    "z": "24b73be9.bd5604",
+    "name": "",
+    "topic": "motdemo",
+    "qos": "2",
+    "broker": "a14dff02.c479e",
+    "x": 203,
+    "y": 181,
+    "wires": [
+      [
+        "ee8ac832.e899a8"
+      ]
+    ]
+  },
+  {
+    "id": "ee8ac832.e899a8",
+    "type": "json",
+    "z": "24b73be9.bd5604",
+    "name": null,
+    "pretty": true,
+    "x": 428,
+    "y": 215,
+    "wires": [
+      [
+        "abafbd4b.556f"
+      ]
+    ]
+  },
+  {
+    "id": "d1a0b057.cb4ba",
+    "type": "debug",
+    "z": "dba966fb.481c28",
+    "name": "",
+    "active": true,
+    "console": "false",
+    "complete": "false",
+    "x": 408,
+    "y": 323,
+    "wires": []
+  },
+  {
+    "id": "ecb69dc4.80208",
+    "type": "ui_gauge",
+    "z": "dba966fb.481c28",
+    "name": "",
+    "group": "25d1257d.2b231a",
+    "order": 0,
+    "width": 0,
+    "height": 0,
+    "gtype": "gage",
+    "title": "gauge",
+    "label": "units",
+    "format": "{{value}}",
+    "min": 0,
+    "max": "40",
+    "colors": [
+      "#00b500",
+      "#e6e600",
+      "#ca3838"
+    ],
+    "seg1": "15",
+    "seg2": "30",
+    "x": 699,
+    "y": 156,
+    "wires": []
+  },
+  {
+    "id": "d63e100d.546b2",
+    "type": "change",
+    "z": "dba966fb.481c28",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "payload.ambientTemp",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 432,
+    "y": 164,
+    "wires": [
+      [
+        "ecb69dc4.80208"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "configurable": false,
+  "description": "A JavaScript function block to run against the messages being received by the node",
+  "mddProperties": [
+    {
+      "name": "func",
+      "value": "\nreturn msg;",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "outputs",
+      "value": 1,
+      "required": true,
+      "type": "int"
+    }
+  ],
+  "stereotype": "function",
+  "type": "function"
+}

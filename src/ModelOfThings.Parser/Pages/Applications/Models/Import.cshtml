@@ -1,0 +1,36 @@
+﻿@page "{appId?}"
+@using System.Security.Claims
+@model ModelOfThings.Parser.Pages.Applications.Models.ImportModel
+@{
+    ViewData["Title"] = "Models";
+
+    ViewData["AppName"] = Model.MddApplication.Name;
+    ViewData["AppId"] = Model.MddApplication.Id;
+    ViewData["ModelClass"] = "active";
+}
+
+
+<div class="card">
+    <div class="card-body">
+        <div class="text-wrap p-lg-6">
+            <h2 class="mt-0 mb-4">Import a UML Diagram</h2>
+            <p></p>
+
+            <form method="post" enctype="multipart/form-data">
+                <input type="hidden" asp-for="UmlModel.UserId" value="@User.FindFirstValue(ClaimTypes.NameIdentifier)"/>
+                <input type="hidden" asp-for="UmlModel.MddApplicationId" />
+                <div class="form-group">
+                    <label asp-for="UmlModel.UmlModelFile" class="control-label"></label>
+                    <div class="custom-file">
+                        <input type="file" asp-for="UmlModel.UmlModelFile" />
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-lg btn-primary">Import</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+

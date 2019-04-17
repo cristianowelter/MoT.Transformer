@@ -1,0 +1,22 @@
+﻿{
+  "stereotype": "SensorSubscribe",
+  "type": "tab",
+  "Configurable": true,
+  "mddComponents": [
+    {
+      "id": "a",
+      "stereotype": "mqttin",
+      "positionX": 110,
+      "positionY": 200,
+      "connections": "b"
+    },
+    {
+      "id": "b",
+      "stereotype": "json",
+      "positionX": 350,
+      "positionY": 200,
+      "connections": "c",
+      "ConnectionOut": true
+    }
+  ]
+}
