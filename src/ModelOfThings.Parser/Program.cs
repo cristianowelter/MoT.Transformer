@@ -5,6 +5,7 @@ namespace ModelOfThings.Parser
 {
     public class Program
     {
+         // This method starts the parser
         public static void Main(string[] args)
         {
             CreateWebHostBuilder(args).Build().Run();
